@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Text?>
+
+<DialogPane prefHeight="180.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.app.EditRowController">
+   <content>
+      <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="192.0" prefWidth="720.0">
+         <children>
+            <Text layoutX="81.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date" />
+            <TextField fx:id="dateEdit" layoutX="14.0" layoutY="119.0" />
+            <Text layoutX="229.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Training Type" />
+            <TextField fx:id="trainingTypeEdit" layoutX="187.0" layoutY="119.0" />
+            <Text layoutX="416.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Workout" />
+            <TextField fx:id="workoutEdit" layoutX="360.0" layoutY="119.0" />
+            <Text layoutX="592.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Length" />
+            <TextField fx:id="lengthEdit" layoutX="532.0" layoutY="119.0" />
+            <Text layoutX="313.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Edit Workout Log" />
+            <Button fx:id="cancelButton" layoutX="612.0" layoutY="162.0" mnemonicParsing="false" onAction="#setCancelButton" prefHeight="26.0" prefWidth="87.0" text="Cancel" />
+            <Button fx:id="applyButton" layoutX="505.0" layoutY="162.0" mnemonicParsing="false" onAction="#setApplyButton" prefHeight="26.0" prefWidth="87.0" text="Apply" />
+         </children>
+      </Pane>
+   </content>
+</DialogPane>

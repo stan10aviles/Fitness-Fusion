@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane onMouseClicked="#clearMessage" prefHeight="390.0" prefWidth="875.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.app.TrackProgressController">
+   <children>
+      <Pane prefHeight="67.0" prefWidth="642.0" style="-fx-background-color: #212121;">
+         <children>
+            <Text fill="#f5f3f3" layoutX="23.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Track Progess">
+               <font>
+                  <Font name="AppleGothic Regular" size="36.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutY="67.0" prefHeight="333.0" prefWidth="299.0">
+         <children>
+            <Pane prefHeight="333.0" prefWidth="297.0">
+               <children>
+                  <Text layoutX="35.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <DatePicker fx:id="date" layoutX="100.0" layoutY="27.0" />
+                  <Text layoutX="13.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Training Type">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <ChoiceBox fx:id="trainingType" layoutX="119.0" layoutY="85.0" prefWidth="150.0" />
+                  <Text layoutX="28.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Workout">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <ChoiceBox fx:id="workout" layoutX="119.0" layoutY="145.0" prefWidth="150.0" />
+                  <Text layoutX="13.0" layoutY="218.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Length (Minutes)">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="logWorkoutButton" layoutX="149.0" layoutY="270.0" mnemonicParsing="false" onAction="#logWorkout" text="Log Workout" />
+                  <TextField fx:id="length" layoutX="119.0" layoutY="200.0" prefHeight="25.0" prefWidth="150.0" />
+                  <Text fx:id="workoutLoggedText" fill="#212121" layoutX="142.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="emptyFieldsText" fill="#da2f2f" layoutX="125.0" layoutY="252.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="306.0" prefHeight="333.0" prefWidth="568.0">
+               <children>
+                  <TableView fx:id="trackProgressTable" layoutX="-1.0" prefHeight="333.0" prefWidth="568.0">
+                    <columns>
+                      <TableColumn fx:id="uidCol" prefWidth="59.0" text="User ID" />
+                      <TableColumn fx:id="dateCol" prefWidth="94.0" text="Date" />
+                        <TableColumn fx:id="trainTypeCol" prefWidth="97.0" text="Training Type" />
+                        <TableColumn fx:id="workoutCol" prefWidth="87.0" text="Workout" />
+                        <TableColumn fx:id="lengthCol" prefWidth="79.0" text="Length" />
+                        <TableColumn fx:id="editCol" prefWidth="133.0" text="Edit" />
+                        <TableColumn fx:id="workoutLogsIDCol" prefWidth="75.0" text="Workout Logs ID" visible="false" />
+                    </columns>
+                  </TableView>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane layoutX="641.0" prefHeight="67.0" prefWidth="230.0">
+         <children>
+            <Button fx:id="mainMenuButton" layoutX="127.0" layoutY="21.0" mnemonicParsing="false" onAction="#returnToMainMenu" style="-fx-background-color: #212121; -fx-border-radius: 10px;" text="Main Menu" textFill="#f4f8f7" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
